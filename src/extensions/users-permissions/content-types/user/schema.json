@@ -63,17 +63,17 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "locations": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::location.location",
-      "mappedBy": "user"
-    },
     "name": {
       "type": "string"
     },
     "lastName": {
       "type": "string"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::location.location",
+      "mappedBy": "user"
     }
   }
 }

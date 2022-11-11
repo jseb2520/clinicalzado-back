@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -20,13 +20,16 @@
     },
     "active": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "pluginOptions": {}
     },
     "serviceCost": {
-      "type": "biginteger"
+      "type": "integer",
+      "pluginOptions": {}
     },
     "date": {
-      "type": "date"
+      "type": "date",
+      "pluginOptions": {}
     },
     "location": {
       "type": "relation",
@@ -38,26 +41,35 @@
       "type": "enumeration",
       "enum": [
         "paid",
-        "pending",
-        "cancelled"
-      ]
+        "unpaid",
+        "overdue"
+      ],
+      "pluginOptions": {}
     },
     "claimed": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "pluginOptions": {}
     },
     "dateClaimed": {
-      "type": "datetime"
+      "type": "datetime",
+      "pluginOptions": {}
     },
     "completed": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "pluginOptions": {}
     },
     "consecutive": {
-      "type": "biginteger"
+      "type": "biginteger",
+      "pluginOptions": {}
     },
-    "description": {
-      "type": "richtext"
+    "items": {
+      "displayName": "items",
+      "type": "component",
+      "repeatable": true,
+      "component": "service-item.items",
+      "pluginOptions": {}
     }
   }
 }
