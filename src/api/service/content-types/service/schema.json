@@ -4,7 +4,7 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "Service",
+    "displayName": "Servicio",
     "description": ""
   },
   "options": {
@@ -12,55 +12,50 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "client": {
+    "cliente": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::client.client",
-      "inversedBy": "services"
+      "inversedBy": "servicios"
     },
-    "active": {
-      "type": "boolean",
-      "default": false,
-      "pluginOptions": {}
-    },
-    "serviceCost": {
+    "costoServicio": {
       "type": "integer",
       "pluginOptions": {}
     },
-    "date": {
+    "fechaIngreso": {
       "type": "date",
       "pluginOptions": {}
     },
-    "location": {
+    "sede": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::location.location",
-      "inversedBy": "services"
+      "inversedBy": "servicios"
     },
-    "status": {
+    "estado": {
       "type": "enumeration",
       "enum": [
-        "paid",
-        "unpaid",
-        "overdue"
+        "pagado",
+        "abonado",
+        "no pagado"
       ],
       "pluginOptions": {}
     },
-    "claimed": {
+    "reclamado": {
       "type": "boolean",
       "default": false,
       "pluginOptions": {}
     },
-    "dateClaimed": {
+    "fechaReclamado": {
       "type": "datetime",
       "pluginOptions": {}
     },
-    "completed": {
+    "completado": {
       "type": "boolean",
       "default": false,
       "pluginOptions": {}
     },
-    "consecutive": {
+    "consecutivo": {
       "type": "biginteger",
       "pluginOptions": {}
     },
@@ -69,7 +64,15 @@
       "type": "component",
       "repeatable": true,
       "component": "service-item.items",
-      "pluginOptions": {}
+      "pluginOptions": {},
+      "required": true
+    },
+    "activo": {
+      "type": "boolean",
+      "default": true
+    },
+    "valorAbonado": {
+      "type": "integer"
     }
   }
 }

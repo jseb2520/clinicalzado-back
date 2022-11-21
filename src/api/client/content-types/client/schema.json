@@ -4,7 +4,7 @@
   "info": {
     "singularName": "client",
     "pluralName": "clients",
-    "displayName": "Client",
+    "displayName": "Cliente",
     "description": ""
   },
   "options": {
@@ -12,20 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "nombre": {
       "type": "string"
     },
-    "lastService": {
-      "type": "date"
-    },
-    "phone": {
-      "type": "biginteger"
-    },
-    "services": {
+    "servicios": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::service.service",
-      "mappedBy": "client"
+      "mappedBy": "cliente"
+    },
+    "telefono": {
+      "type": "string",
+      "unique": true,
+      "required": true
     }
   }
 }

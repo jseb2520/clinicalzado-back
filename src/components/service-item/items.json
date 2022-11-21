@@ -1,24 +1,19 @@
 {
   "collectionName": "components_service_item_items",
   "info": {
-    "displayName": "items"
+    "displayName": "items",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
+    "titulo": {
       "type": "string"
     },
-    "description": {
+    "descripcion": {
       "type": "string"
     },
-    "quantity": {
+    "cantidad": {
       "type": "integer"
-    },
-    "price": {
-      "type": "biginteger"
-    },
-    "total": {
-      "type": "biginteger"
     }
   }
 }

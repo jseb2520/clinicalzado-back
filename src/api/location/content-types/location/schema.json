@@ -4,7 +4,7 @@
   "info": {
     "singularName": "location",
     "pluralName": "locations",
-    "displayName": "Location",
+    "displayName": "Sede",
     "description": ""
   },
   "options": {
@@ -12,26 +12,23 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "nombre": {
       "type": "string"
     },
-    "services": {
+    "direccion": {
+      "type": "string"
+    },
+    "activo": {
+      "type": "boolean"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "servicios": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::service.service",
-      "mappedBy": "location"
-    },
-    "address": {
-      "type": "string"
-    },
-    "active": {
-      "type": "boolean"
-    },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "location"
+      "mappedBy": "sede"
     }
   }
 }
