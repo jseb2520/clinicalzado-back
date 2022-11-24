@@ -1,5 +1,5 @@
 {
-  "name": "clinicalzado-back",
+  "name": "clinicalzado-pg",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -11,21 +11,17 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-documentation": "^4.5.1",
-    "@strapi/plugin-graphql": "^4.5.1",
-    "@strapi/plugin-i18n": "4.5.1",
-    "@strapi/plugin-users-permissions": "4.5.1",
-    "@strapi/strapi": "4.5.1",
-    "better-sqlite3": "7.6.2",
-    "request-promise": "^4.2.6",
-    "strapi-plugin-entity-relationship-chart": "^4.1.0",
-    "strapi-plugin-import-export-entries": "^1.18.0"
+    "@strapi/plugin-i18n": "4.5.2",
+    "@strapi/plugin-users-permissions": "4.5.2",
+    "@strapi/strapi": "4.5.2",
+    "pg": "8.8.0",
+    "request-promise": "^4.2.6"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "a8850749-6701-4d75-83ab-dc635d9a61ee"
+    "uuid": "cd21ba12-ec12-4f90-8b32-e3ab419c3684"
   },
   "engines": {
     "node": ">=14.19.1 <=18.x.x",

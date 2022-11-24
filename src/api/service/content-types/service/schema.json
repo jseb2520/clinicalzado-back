@@ -55,10 +55,6 @@
       "default": false,
       "pluginOptions": {}
     },
-    "consecutivo": {
-      "type": "biginteger",
-      "pluginOptions": {}
-    },
     "items": {
       "displayName": "items",
       "type": "component",
@@ -73,6 +69,11 @@
     },
     "valorAbonado": {
       "type": "integer"
+    },
+    "consecutivo": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
